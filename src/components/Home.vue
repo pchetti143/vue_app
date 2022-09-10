@@ -1,26 +1,29 @@
 <template>
-<h1>Input Field</h1>
-<input type="text" placeholder="Email" v-model="email" /><br>
-<input type="text" placeholder="Password" v-model="password" /><br>
-<button v-on:click=getdata()>Get data</button>
+<h1>Radio and CheckBox</h1>
+<label for="java">Java</label>
+<input type="checkbox" id="java" value="java" v-model="technology" /><br>
+<label for="php">PHP</label>
+<input type="checkbox" id="php" value="php" v-model="technology" /><br>
+<label for="python">python</label>
+<input type="checkbox" id="python" value="python" v-model="technology" /><br>
+<h2>{{technology}}</h2>
+<br><br>
+<h2>Radio Button for profession</h2>
+<label for="stu">Student</label>
+<input type="radio" id="stu" value="stu" v-model="profession"/><br>
+<label for="dev">Developer</label>
+<input type="radio" id="dev" value="dev" v-model="profession"/><br>
+<h2>profession :{{profession}}</h2>
 </template>
 
 <script>
 export default {
     name: 'HomePage',
     data() {
-        return{
-            email:null,
-            password:null
+        return {
+            technology: [],
+            profession:[]
         }
-
-    },
-    methods:{
-         getdata()
-         {
-            console.log("email is:"+this.email+" password is:"+this.password)
-         }
-
     }
 }
 </script>
