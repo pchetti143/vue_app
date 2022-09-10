@@ -1,6 +1,7 @@
 <template>
-<h1>Home Component</h1>
-<h2>{{email}}+{{msg}}+hai+{{getName("praneeth")}}+{{data().email}}</h2>
+<h1 v-on:mousemove=mousemove()>Home Component {{msg}}</h1>
+<button v-on:click=getdata()>Click me</button>
+<h1>{{count}}</h1>
 </template>
 
 <script>
@@ -10,21 +11,15 @@ export default {
         msg: String
     },
     data() {
-        return {
-            email: "pchetti@opentext.com",
-            password: "helloworld",
-
-        }
+           return{ count:0}
     },
     methods: {
-        getName(x) {
-            return "hello" + x;
+        getdata() {
+            alert("Button clicked")
+            this.count+=1
         },
-        data() {
-            return {
-                email: "hey@test.com",
-                mobile: "998844"
-            }
+        mousemove() {
+            console.log("event fired")
         }
     }
 }
