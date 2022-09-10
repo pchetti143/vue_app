@@ -1,6 +1,6 @@
 <template>
 <img alt="Vue logo" src="./assets/logo.png">
-<HelloWorld msg="Welcome to Ganesha _techpark domulur_ Palace" />
+<HelloWorld msg="//merge-2-updates 2//Welcome to Ganesha _techpark domulur banglore_ Palace" />
 </template>
 
 <script>
