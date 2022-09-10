@@ -1,17 +1,26 @@
 <template>
-<h1>Two Way Binding</h1>
-<input type="text" v-model="data"/>
-<h2>{{data}}</h2>
+<h1>Input Field</h1>
+<input type="text" placeholder="Email" v-model="email" /><br>
+<input type="text" placeholder="Password" v-model="password" /><br>
+<button v-on:click=getdata()>Get data</button>
 </template>
 
 <script>
 export default {
     name: 'HomePage',
-    data()
-    {
+    data() {
         return{
-            data:100
+            email:null,
+            password:null
         }
+
+    },
+    methods:{
+         getdata()
+         {
+            console.log("email is:"+this.email+" password is:"+this.password)
+         }
+
     }
 }
 </script>
