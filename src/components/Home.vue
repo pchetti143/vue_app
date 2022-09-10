@@ -1,6 +1,6 @@
 <template>
 <h1>Home Component</h1>
-<h2>{{email}}+{{msg}}+hai+{{getName("anil")}}</h2>
+<h2>{{email}}+{{msg}}+hai+{{getName("praneeth")}}+{{data().email}}</h2>
 </template>
 
 <script>
@@ -13,8 +13,17 @@ export default {
         return {
             email: "pchetti@opentext.com",
             password: "helloworld",
-            getName(x){
-                return "chetti"+x;
+
+        }
+    },
+    methods: {
+        getName(x) {
+            return "hello" + x;
+        },
+        data() {
+            return {
+                email: "hey@test.com",
+                mobile: "998844"
             }
         }
     }
