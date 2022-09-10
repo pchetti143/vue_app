@@ -1,16 +1,19 @@
 <template>
 <img alt="Vue logo" src="./assets/logo.png">
-<HelloWorld msg="//merge-2-updates 2//Welcome to Ganesha _techpark domulur banglore_ Palace" />
+<HelloWorld msg="Welcom to Vue.Js" />
+<Home/>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import Home from './components/Home.vue';
 
 export default {
     name: 'App',
     components: {
-        HelloWorld
-    }
+    HelloWorld,
+    Home
+}
 }
 </script>
 
