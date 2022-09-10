@@ -1,26 +1,19 @@
 <template>
-<h1>For-loop</h1>
-<ul>
-    <li v-for="item in technology" :key="item">
-      {{item}}
-    </li>
-</ul>
+<h1>child-compo test</h1>
+<Child :fname="name" :cardata="cars"/>
 </template>
 
 <script>
+import Child from './Child.vue';
+
 export default {
-    name: 'HomePage',
-    data() {
-        return {
-            technology: [
-                "java",
-                "python",
-                "c",
-                "c++",
-                "php",
-                "node"
-            ]
-        }
+    name: "HomePage",
+    components: { Child },
+    data(){
+         return{
+            name:"chetti",
+            cars:{1:"audi",2:"BMW",3:"Benz"}
+         }
     }
 }
 </script>
