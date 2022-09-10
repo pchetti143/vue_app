@@ -1,15 +1,26 @@
 <template>
-<h1>Radio and CheckBox</h1>
-<h4 v-if="show">Condition true</h4>
-<h4 v-else>Condition False</h4>
-<button v-on:click="show=!show">Click me</button>
+<h1>For-loop</h1>
+<ul>
+    <li v-for="item in technology" :key="item">
+      {{item}}
+    </li>
+</ul>
 </template>
 
 <script>
 export default {
     name: 'HomePage',
-    data(){
-        return {show:true}
+    data() {
+        return {
+            technology: [
+                "java",
+                "python",
+                "c",
+                "c++",
+                "php",
+                "node"
+            ]
+        }
     }
 }
 </script>
