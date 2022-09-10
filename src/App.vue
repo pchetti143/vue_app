@@ -1,6 +1,6 @@
 <template>
 <img alt="Vue logo" src="./assets/logo.png">
-<HelloWorld msg="Welcome to Ganesha Coding Palace" />
+<HelloWorld msg="Welcome to Ganesha _tech_ Palace" />
 </template>
 
 <script>
