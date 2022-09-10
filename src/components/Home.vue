@@ -1,25 +1,16 @@
 <template>
-<h1 v-on:mousemove=mousemove()>Home Component {{msg}}</h1>
-<button v-on:click=getdata()>Click me</button>
-<h1>{{count}}</h1>
+<h1>Two Way Binding</h1>
+<input type="text" v-model="data"/>
+<h2>{{data}}</h2>
 </template>
 
 <script>
 export default {
     name: 'HomePage',
-    props: {
-        msg: String
-    },
-    data() {
-           return{ count:0}
-    },
-    methods: {
-        getdata() {
-            alert("Button clicked")
-            this.count+=1
-        },
-        mousemove() {
-            console.log("event fired")
+    data()
+    {
+        return{
+            data:100
         }
     }
 }
